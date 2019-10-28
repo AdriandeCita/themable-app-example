@@ -1,0 +1,9 @@
+{
+	"packages": [
+		"src/app/**",
+		"src/theme_editor/**",
+		"src/components/**",
+		"src/server/**"
+	],
+	"version": "independent"
+}

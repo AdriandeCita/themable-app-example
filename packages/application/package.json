@@ -1,0 +1,23 @@
+{
+  "name": "application",
+  "version": "0.1.0",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "useTabs": true
+  },
+  "dependencies": {
+    "core-js": "~3.1.1",
+    "react": "~16.9.0",
+    "react-dev-utils": "~6.1.0",
+    "react-dom": "~16.9.0",
+    "react-hot-loader": "~4.8.5",
+    "react-router": "~5.0.1",
+    "react-router-dom": "~5.0.1",
+    "styled-components": "~4.2.0"
+  },
+  "scripts": {
+    "watch:dev": "node scripts/start.js",
+    "build:prod": "node scripts/build.js"
+  }
+}

@@ -7,7 +7,6 @@
     "useTabs": true
   },
   "devDependencies": {
-    "@neutrinojs/react": "^8.3.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -19,15 +18,12 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "lerna": "^3.19.0",
-    "neutrino": "^8.3.0"
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "dev": "npm run watch",
     "bootstrap": "lerna bootstrap --hoist",
     "start": "lerna run start --stream",
     "watch": "lerna run watch --stream"
-  },
-  "dependencies": {
-    "prettier": "^1.19.1"
   }
 }

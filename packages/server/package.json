@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "live-server": "1.2.1"
+  },
+  "scripts": {
+    "start": "npx live-server --port=3012"
+  }
+}

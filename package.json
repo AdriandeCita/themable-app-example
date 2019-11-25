@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "npm run watch",
     "bootstrap": "lerna bootstrap --hoist",
-    "start": "lerna run start --stream",
+    "start": "lerna bootstrap --hoist && lerna run start --stream",
     "watch": "lerna run watch --stream"
   }
 }

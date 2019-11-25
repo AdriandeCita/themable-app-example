@@ -1,7 +1,10 @@
 {
   "packages": [
     "packages/application",
-    "packages/theme_editor"
+    "packages/server",
+    "packages/theme_editor",
+    "packages/components/**",
+    "packages/services/**"
   ],
-  "version": "0.0.0"
+  "version": "independent"
 }

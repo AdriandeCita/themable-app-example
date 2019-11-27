@@ -1,10 +1,6 @@
 {
-  "packages": [
-    "packages/application",
-    "packages/server",
-    "packages/theme_editor",
-    "packages/components/**",
-    "packages/services/**"
-  ],
-  "version": "independent"
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }

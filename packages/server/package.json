@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "live-server": "1.2.1"
+    "express": "^4.17.1"
   },
   "scripts": {
-    "start": "npx live-server --port=3012"
+    "start": "node --experimental-modules index.js"
   }
 }

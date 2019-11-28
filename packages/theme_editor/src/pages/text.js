@@ -2,10 +2,10 @@ import React from 'react';
 import { Text } from '@namespace/components';
 
 const TextPage = () => (
-	<div>
-		<h2>Text component</h2>
+	<div className="editor-area">
+		<h3>Text component</h3>
 		<div className="working-area">
-			<Text>Some test text</Text>
+			<Text path="components.text">Some text sample</Text>
 		</div>
 	</div>
 );

@@ -1,4 +1,73 @@
 .main-layout {
     display: flex;
+    min-height: calc(100vh - 36px - 3vw);
+}
 
+.header-main {
+    background-color: #4a6d7c;
+    padding: 1em 2em;
+    line-height: 1;
+    font-size: calc(12px + 1vw);
+    color: #fff;
+}
+
+.workspace-area {
+    flex-grow: 2;
+}
+
+.navigation-sidebar {
+    background-color: #62929e;
+    padding: 1em 2em 1em 1em;
+    font-size: calc(10px + 0.5vw);
+}
+
+.navigation-sidebar ul {
+    padding-left: 0;
+}
+
+.navigation-sidebar li {
+    list-style-type: none;
+}
+
+.navigation-sidebar a {
+    color: #000;
+    font-size: 1.1em;
+}
+
+.editor-toolbar {
+    background-color: #c6c5b9;
+    padding: 1em;
+    font-size: calc(10px + 0.5vw);
+    position: relative;
+}
+
+.editor-area {
+    padding: 1em 2em;
+    background-color: #f6f5e9;
+    flex-grow: 1;
+    font-size: calc(10px + 0.5vw);
+}
+
+.working-area {
+    background: #fff;
+    padding: 2em;
+    box-shadow: 0 0 3px 1px #c6c5b9;
+}
+
+.close-button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    padding: 4px 8px;
+    line-height: 1;
+    font-size: calc(10px + 1vw);
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.editor-content label {
+    display: block;
+    padding-bottom: 0.5em;
+    margin-top: 1.5em;
 }

@@ -1,3 +1,47 @@
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 36px - 3vw);
+}
+
+.header-main {
+    background-color: #7b2d26;
+    padding: 1em 2em;
+    line-height: 1;
+    font-size: calc(12px + 1vw);
+    color: #fff;
+}
+
+.workspace-area {
+    flex-grow: 2;
+}
+
+.navigation-sidebar {
+    background-color: #d7c9aa;
+    padding: 1em 2em 1em 1em;
+    font-size: calc(10px + 0.5vw);
+}
+
+.navigation-sidebar ul {
+    padding-left: 0;
+}
+
+.navigation-sidebar li {
+    list-style-type: none;
+}
+
+.navigation-sidebar a {
+    color: #000;
+    font-size: 1.1em;
+}
+
+.main-area {
+    background: #f0f3f5;
+    flex-grow: 1;
+    padding: 2em;
+}
+
+
+/* TODO remove this shit later */
 .avatar {
     width: 120px;
     height: 120px;

@@ -1,39 +1,46 @@
 import React from 'react';
 import './App.css';
-import { Route, BrowserRouter, Link } from 'react-router-dom';
-import TextPage from './pages/text';
-import HomePage from './pages/home';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { ThemeProviderService } from '@namespace/services';
+import Workspace from './components/workspace';
+import EditorProvider from './components/editorProvider';
 
 function App() {
 	return (
-		<BrowserRouter>
-			<div>
-				<header className="App-header">Theme Editor</header>
-				<div className="main-layout">
-					<nav>
-						<h3>Components</h3>
-						<ul>
-							<li>
-								<Link to="/text">Typography</Link>
-							</li>
-							<li>
-								<Link to="/">Image</Link>
-							</li>
-							<li>
-								<Link to="/">Button</Link>
-							</li>
-							<li>
-								<Link to="/">List</Link>
-							</li>
-						</ul>
-					</nav>
-					<main className="workspace-area">
-						<Route path="/" exact component={HomePage} />
-						<Route path="/text" exact component={TextPage} />
-					</main>
-				</div>
-			</div>
-		</BrowserRouter>
+		<ThemeProviderService>
+			<BrowserRouter>
+				<EditorProvider>
+					<div>
+						<header className="header-main">Theme Editor</header>
+						<div className="main-layout">
+							<nav className="navigation-sidebar">
+								<h3>Components</h3>
+								<ul>
+									<li>
+										<Link to="/text">Text</Link>
+									</li>
+									<li>
+										<Link to="/text-editable">
+											Editable Content
+										</Link>
+									</li>
+									<li>
+										<Link to="/typography">Typography</Link>
+									</li>
+									<li>
+										<Link to="/image">Image</Link>
+									</li>
+									<li>
+										<Link to="/list">List</Link>
+									</li>
+								</ul>
+							</nav>
+							<Workspace />
+						</div>
+					</div>
+				</EditorProvider>
+			</BrowserRouter>
+		</ThemeProviderService>
 	);
 }
 

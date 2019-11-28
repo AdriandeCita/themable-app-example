@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "@namespace/components": "^0.1.0",
-    "@namespace/services": "^0.1.0"
+    "@namespace/services": "^0.1.0",
+    "react-router-dom": "^5.1.2"
   },
   "scripts": {
     "start": "PORT=3010 react-app-rewired start",

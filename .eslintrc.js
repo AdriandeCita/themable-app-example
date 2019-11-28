@@ -39,6 +39,7 @@ module.exports = {
     "react/forbid-prop-types": "off",
     "react/prop-types": "off",
     "react/prefer-stateless-function": "off",
+    "react/jsx-props-no-spreading": "off",
     "linebreak-style":"off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

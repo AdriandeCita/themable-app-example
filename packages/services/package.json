@@ -14,5 +14,9 @@
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "styled-components": "^4.4.1"
   }
 }

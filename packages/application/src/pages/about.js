@@ -1,10 +1,10 @@
 import React from 'react';
-import Text from '@namespace/components';
+import { Text, Title } from '@namespace/components';
 
 const AboutPage = () => {
 	return (
 		<div>
-			<h3>About this project</h3>
+			<Title size="large">About this project</Title>
 			<Text>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 				eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis

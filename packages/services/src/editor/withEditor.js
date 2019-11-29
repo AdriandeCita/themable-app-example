@@ -5,6 +5,7 @@ const ACTIVE_COMPONENT_WRAPPER = {
 	outline: '2px dashed blue',
 };
 const HOVERED_COMPONENT_WRAPPER = {
+	cursor: 'pointer',
 	outline: '2px dashed skyblue',
 };
 

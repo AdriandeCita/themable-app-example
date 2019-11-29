@@ -21,7 +21,7 @@ function App() {
 										<Link to="/text">Text</Link>
 									</li>
 									<li>
-										<Link to="/text-editable">
+										<Link to="/editable-content">
 											Editable Content
 										</Link>
 									</li>

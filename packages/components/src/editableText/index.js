@@ -3,33 +3,28 @@ import styled, { withTheme } from 'styled-components';
 import { withEditor, Text as TextControl } from '@namespace/services';
 import extractStyle from '../styleProvider';
 
-const getStyle = ({ theme, size }) =>
-	extractStyle(
-		theme,
-		[
-			`components.title.style`,
-			size ? `components.title.${size}.style` : null,
-		].filter(Boolean),
-	);
+const getStyle = ({ theme }) =>
+	extractStyle(theme, ['components.editableText.style']);
 
 const View = styled.div`
-	display: block;
+	display: inline-block;
 
 	${props => getStyle(props)}
 `;
 
-const Title = props => {
-	const { children, size } = props;
+const EditableText = props => {
+	const { theme } = props;
+	const options = extractStyle(theme, ['components.editableText']);
 
-	return <View size={size}>{children}</View>;
+	return <View>{options.content || 'Default text'}</View>;
 };
 
-export default withEditor(withTheme(Title), {
+export default withEditor(withTheme(EditableText), {
 	stylerControls: (
 		<>
 			<TextControl path="style.color" label="Color" />
-			<TextControl path="style.fontSize" label="Font size" />
 			<TextControl path="style.background" label="Background" />
+			<TextControl path="content" label="Content" />
 		</>
 	),
 });

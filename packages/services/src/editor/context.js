@@ -12,6 +12,7 @@ const EditorContextProvider = ({ children, theme: initialTheme }) => {
 	const [stylerControls, setStylerControls] = useState(null);
 	const [activePath, setActivePath] = useState('');
 	const [theme, setTheme] = useState(initialTheme);
+	const [stylerMode, setStylerMode] = useState(false);
 
 	useEffect(() => {
 		setTheme(initialTheme);
@@ -63,6 +64,8 @@ const EditorContextProvider = ({ children, theme: initialTheme }) => {
 				openEditorToolbar,
 				stylerControls,
 				closeEditorToolbar,
+				stylerMode,
+				setStylerMode,
 			}}
 		>
 			{children}

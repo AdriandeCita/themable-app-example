@@ -9,7 +9,9 @@ const HOVERED_COMPONENT_WRAPPER = {
 };
 
 const withEditor = (WrappedComponent, config) => props => {
-	const { activePath, openEditorToolbar } = useContext(EditorContext);
+	const { activePath, openEditorToolbar, stylerMode } = useContext(
+		EditorContext,
+	);
 	const [isHovered, setHoverState] = useState(false);
 	const { path } = props;
 
@@ -41,7 +43,7 @@ const withEditor = (WrappedComponent, config) => props => {
 		pointerEventStyles = ACTIVE_COMPONENT_WRAPPER;
 	}
 
-	return (
+	return stylerMode ? (
 		<div
 			style={pointerEventStyles}
 			onClick={isActive ? undefined : clickHandler}
@@ -52,6 +54,8 @@ const withEditor = (WrappedComponent, config) => props => {
 		>
 			<WrappedComponent {...props} />
 		</div>
+	) : (
+		<WrappedComponent {...props} />
 	);
 };
 

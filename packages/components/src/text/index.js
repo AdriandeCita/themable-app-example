@@ -6,10 +6,9 @@ import extractStyle from '../styleProvider';
 const getStyle = ({ theme }) => extractStyle(theme, ['components.text.style']);
 
 const View = styled.div`
-	${props => {
-		return getStyle(props);
-	}}
-	${props => props.editorStyles}
+	display: inline-block;
+
+	${props => getStyle(props)}
 `;
 
 const Text = props => {

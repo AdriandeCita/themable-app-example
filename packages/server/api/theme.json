@@ -1,1 +1,12 @@
-{"theme":{"components":{"text":{"style":{"color":"red","background":"transparent"}}}}}
+{
+  "theme": {
+    "components": {
+      "text": {
+        "style": {
+          "color": "red",
+          "background": "transparent"
+        }
+      }
+    }
+  }
+}

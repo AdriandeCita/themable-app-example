@@ -4,6 +4,7 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import { ThemeProviderService } from '@namespace/services';
 import Workspace from './components/workspace';
 import EditorProvider from './components/editorProvider';
+import Header from './components/header';
 
 function App() {
 	return (
@@ -11,7 +12,7 @@ function App() {
 			<BrowserRouter>
 				<EditorProvider>
 					<div>
-						<header className="header-main">Theme Editor</header>
+						<Header />
 						<div className="main-layout">
 							<nav className="navigation-sidebar">
 								<h3>Components</h3>

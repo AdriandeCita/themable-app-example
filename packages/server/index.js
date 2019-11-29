@@ -15,7 +15,7 @@ app.get('/api/getTheme', (req, res) => {
 });
 
 app.post('/api/setTheme', (req, res) => {
-	fs.writeFile(themeFile, JSON.stringify(req.body), err => {
+	fs.writeFile(themeFile, JSON.stringify(req.body, null, 2), err => {
 		if (err) throw err;
 
 		res.status(200).json({

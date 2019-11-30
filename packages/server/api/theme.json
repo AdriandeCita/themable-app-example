@@ -6,29 +6,6 @@
           "color": "blue",
           "background": "transparent"
         }
-      },
-      "editableText": {
-        "content": "some another text"
-      },
-      "title": {
-        "style": {
-          "color": "blue"
-        },
-        "small": {
-          "style": {
-            "fontSize": "25px"
-          }
-        },
-        "large": {
-          "style": {
-            "fontSize": "56px"
-          }
-        },
-        "medium": {
-          "style": {
-            "color": "red"
-          }
-        }
       }
     }
   }

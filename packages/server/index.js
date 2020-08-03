@@ -2,9 +2,23 @@ const express = require('express');
 const fs = require('fs');
 
 const themeFile = './api/theme.json';
+const dataPath = './data/';
 const app = express();
 
 app.use(express.json());
+
+app.get('/data/:dataSource', (req, res) => {
+	const { params: { dataSource }} = req;
+	const dataFile = `${dataPath}${dataSource}.json`;
+
+	fs.readFile(dataFile, (err, buf) => {
+		if (err) {
+			res.status(404).send('Not Found');
+		} else {
+			res.send(buf.toString());
+		}
+	})
+});
 
 app.get('/api/getTheme', (req, res) => {
 	fs.readFile(themeFile, (err, buf) => {

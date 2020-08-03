@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "status": "online",
+      "avatar": "/assets/carmack.jpg",
+      "firstName": "John",
+      "lastName": "Carmack",
+      "gamesPlayed": 300
+    },
+    {
+      "status": "offline",
+      "avatar": "/assets/levine.jpg",
+      "firstName": "Ken",
+      "lastName": "Levine",
+      "gamesPlayed": 300
+    },
+    {
+      "status": "online",
+      "avatar": "/assets/spector.jpg",
+      "firstName": "Warren",
+      "lastName": "Spector",
+      "gamesPlayed": 300
+    },
+    {
+      "status": "online",
+      "avatar": "/assets/romero.jpg",
+      "firstName": "John",
+      "lastName": "Romero",
+      "gamesPlayed": 300
+    }
+  ]
+}

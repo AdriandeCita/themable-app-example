@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from "@namespace/components";
 
 const ListPage = () => {
 	return (
@@ -14,12 +15,7 @@ const ListPage = () => {
 			<div className="row">
 				<div className="column">**Online</div>
 				<div className="column">
-					<div className="avatar">
-						<img
-							src="http://localhost:3012/assets/carmack.jpg"
-							alt=""
-						/>
-					</div>
+					<Image source="http://localhost:3012/assets/carmack.jpg" />
 				</div>
 				<div className="column">John</div>
 				<div className="column">Carmack</div>
@@ -29,12 +25,7 @@ const ListPage = () => {
 			<div className="row">
 				<div className="column">**Offline</div>
 				<div className="column">
-					<div className="avatar">
-						<img
-							src="http://localhost:3012/assets/levine.jpg"
-							alt=""
-						/>
-					</div>
+					<Image source="http://localhost:3012/assets/levine.jpg" />
 				</div>
 				<div className="column">Ken</div>
 				<div className="column">Levine</div>
@@ -44,12 +35,7 @@ const ListPage = () => {
 			<div className="row">
 				<div className="column">**Online</div>
 				<div className="column">
-					<div className="avatar">
-						<img
-							src="http://localhost:3012/assets/spector.jpg"
-							alt=""
-						/>
-					</div>
+					<Image source="http://localhost:3012/assets/spector.jpg" />
 				</div>
 				<div className="column">Warren</div>
 				<div className="column">Spector</div>
@@ -59,12 +45,7 @@ const ListPage = () => {
 			<div className="row">
 				<div className="column">**Online</div>
 				<div className="column">
-					<div className="avatar">
-						<img
-							src="http://localhost:3012/assets/romero.jpg"
-							alt=""
-						/>
-					</div>
+					<Image source="http://localhost:3012/assets/romero.jpg" />
 				</div>
 				<div className="column">John</div>
 				<div className="column">Romero</div>

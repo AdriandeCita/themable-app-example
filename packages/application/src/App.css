@@ -42,18 +42,6 @@
 
 
 /* TODO remove this shit later */
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.avatar img {
-    display: block;
-    max-width: 100%;
-}
-
 .list .row {
     display: flex;
     align-items: center;

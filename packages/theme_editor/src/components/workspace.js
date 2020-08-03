@@ -6,6 +6,7 @@ import TextPage from '../pages/text';
 import Toolbar from './toolbar';
 import EditableContentPage from '../pages/editableContent';
 import TypographyPage from '../pages/typography';
+import ImagePage from '../pages/image';
 
 const Workspace = () => {
 	const { stylerControls, showEditor } = useContext(EditorContext);
@@ -22,6 +23,7 @@ const Workspace = () => {
 				component={EditableContentPage}
 			/>
 			<Route path="/typography" exact component={TypographyPage} />
+			<Route path="/image" exact component={ImagePage} />
 		</main>
 	);
 };

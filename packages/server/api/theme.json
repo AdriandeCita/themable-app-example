@@ -6,6 +6,14 @@
           "color": "blue",
           "background": "transparent"
         }
+      },
+      "image": {
+        "style": {
+          "borderRadius": "50% 20%",
+          "width": "100px",
+          "height": "80px",
+          "border": "1px dashed magenta"
+        }
       }
     }
   }

@@ -4,6 +4,8 @@ import withEditor from './editor/withEditor';
 
 import Text from './editor/components/text';
 import Select from './editor/components/select';
+import Row from './editor/components/row';
+import ColumnRemover from './editor/components/column-remover';
 
 export default ThemeProviderService;
 
@@ -15,4 +17,6 @@ export {
 	EditorContextProvider,
 	Text,
 	Select,
+	Row,
+	ColumnRemover,
 };

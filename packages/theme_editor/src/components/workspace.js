@@ -7,6 +7,7 @@ import Toolbar from './toolbar';
 import EditableContentPage from '../pages/editableContent';
 import TypographyPage from '../pages/typography';
 import ImagePage from '../pages/image';
+import ListPage from '../pages/list';
 
 const Workspace = () => {
 	const { stylerControls, showEditor } = useContext(EditorContext);
@@ -24,6 +25,7 @@ const Workspace = () => {
 			/>
 			<Route path="/typography" exact component={TypographyPage} />
 			<Route path="/image" exact component={ImagePage} />
+			<Route path="/list" exact component={ListPage} />
 		</main>
 	);
 };

@@ -53,6 +53,37 @@ const EditorContextProvider = ({ children, theme: initialTheme }) => {
 		setActivePath('');
 	};
 
+	const removeCurrentSubtree = () => {
+		// TODO this is optimized for a quite narrow use case, may need some extending
+		const pathKeys = activePath.split(/[.[]/);
+		const path = pathKeys.slice(0, pathKeys.length - 1).join('.');
+
+		const currentArrayData = get(theme, path, '') || [];
+		const arrayIndexToRemove = parseInt(pathKeys[pathKeys.length - 1], 10);
+
+		const freshTheme = cloneDeep(theme);
+		set(
+			freshTheme,
+			path,
+			currentArrayData.filter(
+				(item, index) => index !== arrayIndexToRemove,
+			),
+		);
+
+		fetch('/api/setTheme', {
+			method: 'post',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				theme: freshTheme,
+			}),
+		}).then(response => {
+			if (response.status === 200) {
+				updateTheme();
+				closeEditorToolbar();
+			}
+		});
+	};
+
 	return (
 		<EditorContext.Provider
 			value={{
@@ -61,6 +92,7 @@ const EditorContextProvider = ({ children, theme: initialTheme }) => {
 				theme,
 				update,
 				getCurrentValue,
+				removeCurrentSubtree,
 				openEditorToolbar,
 				stylerControls,
 				closeEditorToolbar,

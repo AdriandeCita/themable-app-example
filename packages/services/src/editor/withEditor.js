@@ -17,6 +17,7 @@ const withEditor = (WrappedComponent, config) => props => {
 	const { path } = props;
 
 	const isActive = activePath === path;
+	const isChildActive = !isActive && activePath.indexOf(path) === 0
 
 	const clickHandler = () => {
 		if (!isActive) {
@@ -47,8 +48,8 @@ const withEditor = (WrappedComponent, config) => props => {
 	return stylerMode ? (
 		<div
 			style={pointerEventStyles}
-			onClick={isActive ? undefined : clickHandler}
-			onKeyPress={isActive ? undefined : clickHandler}
+			onClick={isActive || isChildActive ? undefined : clickHandler}
+			onKeyPress={isActive || isChildActive ? undefined : clickHandler}
 			onMouseOver={mouseOverHandler}
 			onMouseLeave={mouseLeaveHandler}
 			onFocus={() => {}}

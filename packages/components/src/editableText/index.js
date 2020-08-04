@@ -16,15 +16,17 @@ const EditableText = props => {
 	const { theme } = props;
 	const options = extractStyle(theme, ['components.editableText']);
 
-	return <View>{options.content || 'Default text'}</View>;
+	return <View theme={theme}>{options.content || <i>Default text</i>}</View>;
 };
 
 export default withEditor(withTheme(EditableText), {
 	stylerControls: (
 		<>
+			<TextControl path="content" label="Content" />
+			<TextControl path="style.width" label="width" />
+			<TextControl path="style.padding" label="Padding" />
 			<TextControl path="style.color" label="Color" />
 			<TextControl path="style.background" label="Background" />
-			<TextControl path="content" label="Content" />
 		</>
 	),
 });

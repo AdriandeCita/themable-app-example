@@ -10,18 +10,11 @@ import { ColumnRemover as ColumnRemoverControl } from '../../../services/src';
 import CellWrapper from './cell-wrapper';
 
 const HeaderColumn = props => {
-	const {
-		theme,
-		theme: { header },
-		path,
-	} = props;
+	const { path } = props;
 
 	return (
-		<CellWrapper theme={theme}>
-			<EditableText
-				theme={header}
-				path={`${path}.header.components.editableText`}
-			/>
+		<CellWrapper path={path}>
+			<EditableText path={`${path}.header.components.editableText`} />
 		</CellWrapper>
 	);
 };
@@ -64,8 +57,8 @@ export default withEditor(withTheme(HeaderColumn), {
 				]}
 			/>
 			<TextControl path="style.padding" label="Paddings" />
-			<br/>
-			<br/>
+			<br />
+			<br />
 			<ColumnRemoverControl />
 		</>
 	),

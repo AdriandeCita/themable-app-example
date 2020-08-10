@@ -2,14 +2,13 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { withEditor, Text as TextControl } from '@namespace/services';
 import extractStyle from '../styleProvider';
+import getSchemaGenerator from '../utils/schema-generator';
 
+const stylesSchema = getSchemaGenerator('components.title.style');
 const getStyle = ({ theme, size }) =>
 	extractStyle(
 		theme,
-		[
-			`components.title.style`,
-			size ? `components.title.${size}.style` : null,
-		].filter(Boolean),
+		stylesSchema(size ? `components.title.${size}.style` : null),
 	);
 
 const View = styled.div`

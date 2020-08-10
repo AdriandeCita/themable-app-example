@@ -14,6 +14,105 @@
           "height": "80px",
           "border": "1px dashed magenta"
         }
+      },
+      "list": {
+        "columns": [
+          {
+            "style": {
+              "width": "105px",
+              "padding": "0.5em 1em"
+            },
+            "componentKey": "image",
+            "header": {
+              "components": {
+                "editableText": {
+                  "content": "Another avatar"
+                }
+              }
+            },
+            "dataKey": "avatar",
+            "column": {
+              "components": {
+                "image": {
+                  "style": {
+                    "width": "50px",
+                    "height": "50px",
+                    "borderRadius": "50%",
+                    "border": "none"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": {
+              "width": "130px",
+              "padding": "0.5em 1em",
+              "justifyContent": "center"
+            },
+            "componentKey": "image",
+            "dataKey": "avatar",
+            "column": {
+              "components": {
+                "text": {
+                  "style": {
+                    "color": "red"
+                  }
+                }
+              }
+            },
+            "header": {
+              "components": {
+                "editableText": {
+                  "content": "Avatar",
+                  "style": {}
+                }
+              }
+            }
+          },
+          {
+            "style": {
+              "width": "130px",
+              "padding": "0.5em 1em"
+            },
+            "dataKey": "firstName",
+            "componentKey": "text",
+            "header": {
+              "components": {
+                "editableText": {
+                  "content": "name",
+                  "style": {
+                    "color": "blue"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": {
+              "width": "120px",
+              "padding": "0.5em 1em"
+            },
+            "componentKey": "text",
+            "header": {
+              "components": {
+                "editableText": {
+                  "style": {
+                    "color": "green"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "style": {
+          "width": "120px"
+        }
+      },
+      "editableText": {
+        "style": {
+          "color": "red"
+        }
       }
     }
   }

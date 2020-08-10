@@ -2,9 +2,14 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { withEditor, Text as TextControl } from '@namespace/services';
 import extractStyle from '../styleProvider';
+import pathFrom from '../utils/path-from';
+import getSchemaGenerator from '../utils/schema-generator';
 
-const getStyle = ({ theme }) =>
-	extractStyle(theme, ['components.editableText.style']);
+const stylesSchema = getSchemaGenerator('components.editableText.style');
+const optionsSchema = getSchemaGenerator('components.editableText');
+
+const getStyle = ({ theme, path }) =>
+	extractStyle(theme, stylesSchema(pathFrom(path, 'style')));
 
 const View = styled.div`
 	display: inline-block;
@@ -13,10 +18,11 @@ const View = styled.div`
 `;
 
 const EditableText = props => {
-	const { theme } = props;
-	const options = extractStyle(theme, ['components.editableText']);
+	const { theme, path } = props;
 
-	return <View theme={theme}>{options.content || <i>Default text</i>}</View>;
+	const options = extractStyle(theme, optionsSchema(path));
+
+	return <View path={path}>{options.content || <i>Default text</i>}</View>;
 };
 
 export default withEditor(withTheme(EditableText), {

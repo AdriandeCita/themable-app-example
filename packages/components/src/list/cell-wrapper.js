@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import extractStyle from '../styleProvider';
+import pathFrom from '../utils/path-from';
 
-const getStyle = ({ theme }) => extractStyle(theme, ['style']);
+const getStyle = ({ theme, path }) =>
+	extractStyle(theme, [pathFrom(path, 'style')]);
 
 const CellWrapper = styled.div`
 	display: flex;
@@ -10,4 +12,4 @@ const CellWrapper = styled.div`
 	${props => getStyle(props)}
 `;
 
-export default CellWrapper;
+export default withTheme(CellWrapper);

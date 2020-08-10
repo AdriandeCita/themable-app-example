@@ -2,8 +2,12 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { withEditor, Text as TextControl } from '@namespace/services';
 import extractStyle from '../styleProvider';
+import getSchemaGenerator from '../utils/schema-generator';
+import pathFrom from '../utils/path-from';
 
-const getStyle = ({ theme }) => extractStyle(theme, ['components.image.style']);
+const stylesSchema = getSchemaGenerator('components.image.style');
+const getStyle = ({ theme, path }) =>
+	extractStyle(theme, stylesSchema(pathFrom(path, 'style')));
 
 const View = styled.div`
 	display: flex;
@@ -22,10 +26,12 @@ const Placeholder = styled.div`
 `;
 
 const Image = props => {
-	const { source } = props;
+	const { source, path } = props;
 
 	return (
-		<View>{source ? <img src={source} alt="" /> : <Placeholder />}</View>
+		<View path={path}>
+			{source ? <img src={source} alt="" /> : <Placeholder />}
+		</View>
 	);
 };
 

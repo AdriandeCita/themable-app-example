@@ -34,9 +34,8 @@ const List = props => {
 					<RowWrapper>
 						{columns.map((columnItem, index) => (
 							<HeaderColumn
-								theme={columnItem}
-								path={`${path}.columns[${index}]`}
 								key={weakKey(columnItem)}
+								path={`${path}.columns[${index}]`}
 							/>
 						))}
 					</RowWrapper>
@@ -44,11 +43,10 @@ const List = props => {
 						<RowWrapper key={weakKey(dataItem)}>
 							{columns.map((columnItem, index) => (
 								<RowColumn
+									key={weakKey(columnItem)}
 									dataItem={dataItem}
 									dataKey={columnItem.dataKey}
 									componentKey={columnItem.componentKey}
-									theme={columnItem}
-									key={weakKey(columnItem)}
 									path={`${path}.columns[${index}]`}
 								/>
 							))}

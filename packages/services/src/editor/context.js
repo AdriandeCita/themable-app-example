@@ -20,7 +20,7 @@ const EditorContextProvider = ({ children, theme: initialTheme }) => {
 
 	const update = ({ path, value }) => {
 		const freshTheme = cloneDeep(theme);
-		set(freshTheme, getAbsolutePath(activePath, path), value);
+		set(freshTheme, getAbsolutePath(activePath, path), value || undefined);
 		fetch('/api/setTheme', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },

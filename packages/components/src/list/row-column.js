@@ -12,7 +12,7 @@ const Placeholder = styled.div`
 `;
 
 const RowColumn = props => {
-	const { dataItem, dataKey, componentKey, theme, path } = props;
+	const { dataItem, dataKey, componentKey, path } = props;
 
 	let Component;
 
@@ -20,7 +20,6 @@ const RowColumn = props => {
 		case 'image':
 			Component = (
 				<Image
-					theme={theme.column}
 					path={`${path}.column.components.image`}
 					source={dataItem[dataKey]}
 				/>
@@ -28,10 +27,7 @@ const RowColumn = props => {
 			break;
 		case 'text':
 			Component = (
-				<Text
-					theme={theme.column}
-					path={`${path}.column.components.text`}
-				>
+				<Text path={`${path}.column.components.text`}>
 					{dataItem[dataKey]}
 				</Text>
 			);
@@ -40,7 +36,7 @@ const RowColumn = props => {
 			Component = <Placeholder />;
 	}
 
-	return <CellWrapper theme={theme}>{Component}</CellWrapper>;
+	return <CellWrapper path={path}>{Component}</CellWrapper>;
 };
 
 export default RowColumn;

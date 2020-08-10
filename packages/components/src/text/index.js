@@ -2,8 +2,10 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { withEditor, Text as TextControl } from '@namespace/services';
 import extractStyle from '../styleProvider';
+import getSchemaGenerator from '../utils/schema-generator';
 
-const getStyle = ({ theme }) => extractStyle(theme, ['components.text.style']);
+const stylesSchema = getSchemaGenerator('components.text.style');
+const getStyle = ({ theme, path }) => extractStyle(theme, stylesSchema(path));
 
 const View = styled.div`
 	display: inline-block;

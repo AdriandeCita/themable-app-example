@@ -24,7 +24,11 @@ const Placeholder = styled.div`
 `;
 
 const List = props => {
-	const { data: { items = [] } = {}, theme, path } = props;
+	const {
+		data: { items = [] } = {},
+		theme,
+		path = 'components.list',
+	} = props;
 	const { columns = [] } = extractStyle(theme, ['components.list']);
 
 	return (

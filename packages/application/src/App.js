@@ -4,6 +4,8 @@ import { ThemeProviderService } from '@namespace/services';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import ListPage from './pages/list';
 import AboutPage from './pages/about';
+import CustomListPage from './pages/customList';
+import ThemePage from './pages/theme';
 
 function App() {
 	return (
@@ -12,6 +14,7 @@ function App() {
 				<div>
 					<header className="header-main">
 						The Application&trade;
+						<Link className="link" to="/theme">Show my theme</Link>
 					</header>
 					<div className="main-layout">
 						<nav className="navigation-sidebar">
@@ -21,6 +24,9 @@ function App() {
 									<Link to="/list">List</Link>
 								</li>
 								<li>
+									<Link to="/custom-list">Custom List</Link>
+								</li>
+								<li>
 									<Link to="/about">About</Link>
 								</li>
 							</ul>
@@ -28,6 +34,12 @@ function App() {
 						<main className="main-area">
 							<Route path="/about" exact component={AboutPage} />
 							<Route path="/list" exact component={ListPage} />
+							<Route path="/theme" exact component={ThemePage} />
+							<Route
+								path="/custom-list"
+								exact
+								component={CustomListPage}
+							/>
 							<Route path="/" exact component={ListPage} />
 						</main>
 					</div>

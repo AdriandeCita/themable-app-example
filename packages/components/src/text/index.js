@@ -5,7 +5,8 @@ import extractStyle from '../styleProvider';
 import getSchemaGenerator from '../utils/schema-generator';
 
 const stylesSchema = getSchemaGenerator('components.text.style');
-const getStyle = ({ theme, path }) => extractStyle(theme, stylesSchema(path));
+const getStyle = ({ theme, path }) =>
+	extractStyle(theme, stylesSchema(`${path}.style`));
 
 const View = styled.div`
 	display: inline-block;
@@ -14,9 +15,9 @@ const View = styled.div`
 `;
 
 const Text = props => {
-	const { children } = props;
+	const { children, path = 'components.text' } = props;
 
-	return <View>{children}</View>;
+	return <View path={path}>{children}</View>;
 };
 
 export default withEditor(withTheme(Text), {
